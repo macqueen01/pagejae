@@ -1,7 +1,7 @@
 import sqlalchemy
 from sqlalchemy import create_engine, text
 from flask import Flask, request, jsonify, current_app
-from flask_cors import CORS
+
 
 
 def create_app():
@@ -9,7 +9,7 @@ def create_app():
     app.config.from_pyfile('config.py')
     db = create_engine(app.config['CLEARDB_DATABASE_URL'], encoding='utf-8', max_overflow=0)
     app.database = db
-    CORS(app)
+
 
     @app.route('/getMessage', methods=['GET'])
     def get_message():
