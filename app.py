@@ -11,6 +11,10 @@ def create_app():
     app.database = db
 
 
+    @app.route('/ping', methods=['GET'])
+    def ping():
+        return jsonify({'message': 'pong'})
+    
     @app.route('/getMessage', methods=['GET'])
     def get_message():
         container = []
