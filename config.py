@@ -1,1 +1,1 @@
-DB_URL = 'mysql_mysqlconnector://root:aidan1004@mockingjae.crkm1kv9srrd.ap-northeast-2.rds.amazonaws.com/mockingjae'
+DB_URL = 'mysql+mysqlconnector://root:aidan1004@mockingjae.crkm1kv9srrd.ap-northeast-2.rds.amazonaws.com/mockingjae'
