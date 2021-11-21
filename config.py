@@ -1,1 +1,1 @@
-CLEARDB_DATABASE_URL = 'mysql://bf042c154baf29:3416ce37@us-cdbr-east-04.cleardb.com/heroku_fc6cb96918df0d8'
+DB_URL = 'mysql_mysqlconnector://root:aidan1004@mockingjae.crkm1kv9srrd.ap-northeast-2.rds.amazonaws.com/mockingjae'

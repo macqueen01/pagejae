@@ -7,7 +7,7 @@ from flask import Flask, request, jsonify, current_app
 def create_app():
     app = Flask(__name__)
     app.config.from_pyfile('config.py')
-    db = create_engine(app.config['CLEARDB_DATABASE_URL'], encoding='utf-8', max_overflow=0)
+    db = create_engine(app.config['DB_URL'], encoding='utf-8', max_overflow=0)
     app.database = db
 
 
