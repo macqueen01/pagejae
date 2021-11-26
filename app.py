@@ -1,12 +1,14 @@
 import sqlalchemy
 from sqlalchemy import create_engine, text
 from flask import Flask, request, jsonify, current_app
+from flask_cors import CORS
 
 
 
 def create_app():
     app = Flask(__name__)
     app.config.from_pyfile('config.py')
+    CORS(app)
     db = create_engine(app.config['DB_URL'], encoding='utf-8', max_overflow=0)
     app.database = db
 
