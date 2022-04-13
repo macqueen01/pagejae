@@ -1,0 +1,23 @@
+{
+  "name": "pagejae",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/macqueen01/pagejae.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/macqueen01/pagejae/issues"
+  },
+  "homepage": "https://github.com/macqueen01/pagejae#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "pug": "^3.0.2"
+  }
+}
