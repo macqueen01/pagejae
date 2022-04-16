@@ -2,15 +2,17 @@ const pageRouter = require('./routes/pageJae')
 const visitorsRouter = require('./routes/visitorsJae')
 const express = require('express')
 const flash = require('connect-flash')
+const cookieParser = require('cookie-parser')
 const logger = require('morgan')
 const path = require('path')
 const sequelize = require('./models').sequelize
+const dotenv = require('dotenv').config()
 
 const app = express()
 sequelize.sync()
 
 
-
+// app engine settings
 app.engine('pug', require('pug').__express)
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'pug')
@@ -19,6 +21,7 @@ app.set('port', process.env.PORT || '8001')
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.urlencoded({extended : false}))
 app.use(express.json())
+app.use(cookieParser(process.env.COOKIE_SECRET))
 app.use(flash())
 app.use(logger('dev'))
 

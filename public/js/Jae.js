@@ -3,9 +3,6 @@ document.querySelector('.logo').addEventListener('click', () => {
   window.location.reload()
 })
 
-console.log(document.getElementById('navigate'))
-
-
 document.getElementById('navigate').addEventListener('click', () => {
   window.location.href = window.location.href + '/visitorsjae'
 })
